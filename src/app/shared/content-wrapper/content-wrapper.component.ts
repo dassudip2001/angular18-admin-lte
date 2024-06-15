@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MainHeaderComponent } from '../main-header/main-header.component';
 import { MainSidedarComponent } from '../main-sidedar/main-sidedar.component';
 import { ContentComponent } from '../content/content.component';
+import { MainFooterComponent } from '../main-footer/main-footer.component';
 
 @Component({
   selector: 'app-content-wrapper',
@@ -15,9 +16,15 @@ import { ContentComponent } from '../content/content.component';
         <!-- /.content -->
         <app-content></app-content>
       </div>
+      <app-main-footer></app-main-footer>
     </div>
   `,
   styles: ``,
-  imports: [MainHeaderComponent, MainSidedarComponent, ContentComponent],
+  imports: [
+    MainHeaderComponent,
+    MainSidedarComponent,
+    ContentComponent,
+    MainFooterComponent,
+  ],
 })
 export class ContentWrapperComponent {}

@@ -91,6 +91,14 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
                 </li>
               </ul>
             </li>
+            <!-- Logs -->
+            <li class="nav-item">
+              <a href="pages/widgets.html" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>Logs</p>
+              </a>
+            </li>
+            <!-- end Logs -->
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
