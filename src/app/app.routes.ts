@@ -3,7 +3,12 @@ import { ContentWrapperComponent } from './shared/content-wrapper/content-wrappe
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'auth',
+    loadChildren: () =>
+      import('./features/auth/auth.gateway').then(m => m.AUTH_ROUTES),
+  },
+  {
+    path: 'cms',
     component: ContentWrapperComponent,
     children: [
       {
@@ -22,10 +27,27 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'logs',
+        loadChildren: () =>
+          import('./features/log/log.gateway').then(m => m.LOG_ROUTES),
+      },
+      {
+        path: 'contents',
+        loadChildren: () =>
+          import('./features/content/content.gateway').then(
+            m => m.CONTENT_ROUTES
+          ),
+      },
+      {
         path: '',
         redirectTo: 'dashboard',
         pathMatch: 'full',
       },
     ],
+  },
+  {
+    path: '',
+    redirectTo: 'auth/login',
+    pathMatch: 'full',
   },
 ];

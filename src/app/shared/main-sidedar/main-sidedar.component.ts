@@ -45,9 +45,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
               <a
                 href="pages/widgets.html"
                 class="nav-link"
-                [routerLink]="['/dashboard']"
+                [routerLink]="['/cms/dashboard']"
                 routerLinkActive="active">
-                <i class="nav-icon fas fa-th"></i>
+                <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>Dashboard</p>
               </a>
             </li>
@@ -55,7 +55,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
                with font-awesome or any other icon font library -->
             <li class="nav-item menu-open">
               <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <i class="nav-icon fa-solid fa-gear"></i>
                 <p>
                   Configuration
                   <i class="right fas fa-angle-left"></i>
@@ -65,7 +65,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    [routerLink]="['/configuration/roles']"
+                    [routerLink]="['/cms/configuration/roles']"
                     routerLinkActive="active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Role</p>
@@ -74,7 +74,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    [routerLink]="['/configuration/permissions']"
+                    [routerLink]="['/cms/configuration/permissions']"
                     routerLinkActive="active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Permission</p>
@@ -83,7 +83,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    [routerLink]="['/configuration/users']"
+                    [routerLink]="['/cms/configuration/users']"
                     routerLinkActive="active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Users</p>
@@ -91,14 +91,28 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
                 </li>
               </ul>
             </li>
+            <!-- content -->
+            <li class="nav-item">
+              <a routerLink="/cms/contents" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>Contents</p>
+              </a>
+            </li>
+            <!-- end  -->
             <!-- Logs -->
             <li class="nav-item">
-              <a href="pages/widgets.html" class="nav-link">
+              <a routerLink="/cms/logs" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>Logs</p>
               </a>
             </li>
             <!-- end Logs -->
+            <li class="nav-item">
+              <a routerLink="/cms/logs" class="nav-link">
+                <i class=" nav-icon fa-solid fa-right-from-bracket"></i>
+                <p>Log Out</p>
+              </a>
+            </li>
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
